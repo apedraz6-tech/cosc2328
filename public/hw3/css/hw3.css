@@ -1,0 +1,28 @@
+:root {
+  --main-color: #48cae4;   /* light blue - borders, hover background */
+  --accent-color: #0077b6; /* deeper blue - name, subheads */
+  --space: 16px;
+}
+
+body {
+  background-color: #f0faff;
+  color: #03045e;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#name { font-size: 64px; color: var(--accent-color); }
+.subhead { color: var(--accent-color); font-style: italic; }
+
+.image-wrapper {
+  padding: var(--space);
+  border: 2px solid var(--main-color);
+  margin: var(--space) auto;
+  border-radius: 10px;
+  width: fit-content;
+}
+.image-wrapper img { width: 300px; margin: 0 10px; }
+
+.job-title:hover {
+  color: #ffffff;
+  background-color: var(--main-color);
+}
