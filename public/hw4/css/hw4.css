@@ -1,0 +1,110 @@
+/* HW4 – COSC 2328 – Professor McCurry
+   Implemented by: Augie Pedraza */
+
+/* ---------- Mobile-first base (IC6 box model) ---------- */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f0faff;
+  color: #03045e;
+  line-height: 1.5;
+}
+
+header {
+  background-color: #0077b6;
+  color: white;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+header h1 { font-size: 2.5rem; }
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+/* ---------- Sidebar (IC4 images) ---------- */
+.event-info {
+  background-color: white;
+  border: 2px solid #48cae4;
+  border-radius: 10px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+.event-info h2 { color: #0077b6; margin-bottom: 0.75rem; }
+.event-info ul { list-style: none; margin-bottom: 1rem; }
+.event-info li { padding: 0.4rem 0; border-bottom: 1px solid #e0f4fb; }
+.event-info img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* ---------- Form & interaction styling (IC5/IC6/IC8) ---------- */
+form {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+fieldset {
+  border: 2px solid #48cae4;
+  border-radius: 6px;
+  padding: 1rem;
+  margin-bottom: 1.25rem;
+}
+legend {
+  font-weight: bold;
+  color: #0077b6;
+  padding: 0 0.5rem;
+}
+label {
+  display: block;
+  margin-top: 0.75rem;
+  font-weight: 500;
+}
+
+input {
+  width: 100%;
+  padding: 0.6rem;
+  margin-top: 0.25rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+select {
+  width: 100%;
+  padding: 0.6rem;
+  margin-top: 0.25rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+input:focus, select:focus {
+  outline: none;
+  border-color: #0077b6;
+}
+
+button {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #0077b6;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+button:hover { background-color: #48cae4; }
+
+/* ---------- Responsive desktop layout (new in HW4) ---------- */
+@media (min-width: 768px) {
+  .container { display: flex; gap: 2rem; align-items: flex-start; }
+  .event-info { flex: 1; margin-bottom: 0; }
+  .registration-form { flex: 2; }
+}
