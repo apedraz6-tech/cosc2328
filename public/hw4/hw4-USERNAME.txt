@@ -1,4 +1,0 @@
-Name: Augie Pedraza
-SEU username: apedraz6
-Droplet URL: http://137.184.154.50:8080/hw4/hw4.html
-GitHub repo: https://github.com/apedraz6-tech/cosc2328
