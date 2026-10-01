@@ -48,3 +48,11 @@ if (username) {
   console.log("Registration blocked");
 }
 }
+
+let itemCount = 0;
+
+if (itemCount) {
+  console.log("Cart has " + itemCount + " items");
+} else {
+  console.log("Cart is empty");
+}
