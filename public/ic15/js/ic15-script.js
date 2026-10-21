@@ -40,7 +40,7 @@ function renderPokemon(data) {
     "<img src='" + data.sprites.front_default + "' alt='" + data.name + "'>" +
     "<h2>" + data.name + "</h2>" +
     types.map(function(t){
-        return "<span class='type'>" + t + "</span>";
+        return "<span class='type-badge'>" + t + "</span>";
     }).join("");
 }
 
