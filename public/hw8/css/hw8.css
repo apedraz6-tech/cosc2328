@@ -1,0 +1,169 @@
+/* HW8 – COSC 2328 – Professor McCurry
+   Implemented by: Augie Pedraza */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 40px 16px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: #eef1f5;
+  color: #222;
+}
+
+/* Centered app container */
+.app {
+  max-width: 600px;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 16px;
+}
+
+.app-header h1 {
+  margin: 0;
+  font-size: 1.6rem;
+}
+
+.task-count {
+  color: #666;
+  font-size: 0.95rem;
+}
+
+/* Form area: input, dropdown, button on one row */
+.task-form {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.task-form input[type="text"] {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.task-form select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.task-form button,
+.clear-btn {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  background: #3b6fd8;
+  color: #fff;
+}
+
+.task-form button:hover {
+  background: #2f5bb5;
+}
+
+/* Stack the form neatly on narrow screens */
+@media (max-width: 480px) {
+  .task-form {
+    flex-direction: column;
+  }
+}
+
+/* Error message */
+.error-message {
+  margin: 4px 0 12px;
+  padding: 8px 12px;
+  background: #fdecea;
+  color: #b3261e;
+  border-radius: 6px;
+  font-size: 0.95rem;
+}
+
+/* Task list area */
+.task-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.empty-state {
+  margin-top: 16px;
+  padding: 20px;
+  text-align: center;
+  color: #777;
+  font-style: italic;
+  border: 2px dashed #ddd;
+  border-radius: 8px;
+}
+
+/* Individual task cards */
+.task-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 12px 14px;
+  border: 1px solid #ddd;
+  border-left: 6px solid #999;
+  border-radius: 8px;
+  background: #fafafa;
+}
+
+.task-card.low    { border-left-color: #2e9e4f; }
+.task-card.medium { border-left-color: #e69a17; }
+.task-card.high   { border-left-color: #d93025; }
+
+.task-name {
+  flex: 1;
+  font-size: 1rem;
+}
+
+/* Priority badges */
+.badge {
+  padding: 3px 10px;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.badge.low    { background: #2e9e4f; }
+.badge.medium { background: #e69a17; }
+.badge.high   { background: #d93025; }
+
+.delete-btn {
+  border: none;
+  background: transparent;
+  font-size: 1.2rem;
+  color: #999;
+  cursor: pointer;
+}
+
+.delete-btn:hover {
+  color: #d93025;
+}
+
+.clear-btn {
+  margin-top: 16px;
+  background: #777;
+}
+
+.clear-btn:hover {
+  background: #555;
+}
