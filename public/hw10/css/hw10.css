@@ -1,0 +1,156 @@
+/* HW10 – COSC 2328 – Professor McCurry
+   Implemented by: Augie Pedraza */
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #1e1b2e;
+  color: #eee;
+}
+
+header {
+  background: #2d2645;
+  padding: 20px;
+  text-align: center;
+  border-bottom: 3px solid #f0a500;
+}
+
+header h1 { margin: 0; color: #f0a500; }
+.subtitle { margin: 6px 0 0; color: #bbb; }
+
+main {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h2 { color: #f0a500; }
+
+/* Banners */
+.banner-success,
+.banner-error {
+  padding: 12px 16px;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+.banner-success {
+  background: #1f5130;
+  border: 1px solid #3ecf6e;
+  color: #c8f7d6;
+}
+
+.banner-error {
+  background: #5a1f24;
+  border: 1px solid #e5484d;
+  color: #ffd2d4;
+}
+
+/* Forms */
+.forms {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin: 20px 0;
+}
+
+.form-box {
+  flex: 1 1 260px;
+  background: #2d2645;
+  padding: 16px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-box h2 { margin-top: 0; font-size: 1.2em; }
+.form-box label { margin-top: 8px; font-size: 0.9em; }
+
+.form-box input {
+  padding: 6px;
+  margin-top: 4px;
+  border: 1px solid #555;
+  border-radius: 4px;
+  background: #1e1b2e;
+  color: #eee;
+}
+
+.form-box button {
+  margin-top: 12px;
+  padding: 8px;
+  border: none;
+  border-radius: 4px;
+  background: #f0a500;
+  color: #1e1b2e;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.form-box button:hover { background: #ffc233; }
+
+/* Roster */
+.roster {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 14px;
+}
+
+.monster-card {
+  background: #2d2645;
+  border: 1px solid #443a66;
+  border-radius: 8px;
+  padding: 12px;
+}
+
+.monster-card h3 { margin: 0 0 4px; }
+.monster-id { color: #888; font-size: 0.8em; }
+.species { margin: 0 0 8px; color: #bbb; font-style: italic; }
+
+.stats {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85em;
+}
+
+/* Battle results */
+.battle-results {
+  background: #3a2f12;
+  border: 2px solid #f0a500;
+  border-radius: 10px;
+  padding: 16px;
+  margin: 20px 0;
+  text-align: center;
+}
+
+.battle-results h2 { margin-top: 0; }
+
+.fighters {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.fighter {
+  background: #2d2645;
+  border-radius: 8px;
+  padding: 12px 20px;
+  min-width: 200px;
+}
+
+.fighter h3 { margin: 0 0 4px; }
+.score { font-weight: bold; color: #f0a500; }
+.vs { font-size: 1.6em; font-weight: bold; color: #e5484d; }
+
+.winner {
+  margin-top: 14px;
+  font-size: 1.4em;
+  font-weight: bold;
+  color: #3ecf6e;
+}

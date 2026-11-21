@@ -7,6 +7,9 @@ const app     = express();                               // create the Express a
 const PORT    = process.env.PORT || 3000;               // NEW — IC19: use PORT from .env, fall back to 3000
 
 app.use(express.json());
+app.use(express.urlencoded({ extended: true }));         // NEW — HW10: parse HTML form bodies into req.body
+
+app.use('/hw10', require('./routes/hw10-routes'));  // NEW — HW10: mount hw10 router (above static so /hw10 isn't redirected to the public/hw10 folder)
 
 app.use(express.static(path.join(__dirname, "public"))); // serve every file in public/ as a static file
 
